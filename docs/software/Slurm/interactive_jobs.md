@@ -21,12 +21,13 @@ AGEのqloginコマンドと若干意味合いが違い、srun --pty bash はリ�
 
 ### MPIプログラムのsrunでの起動
 
-Slurmでは、MPI実装との連携はPMIxの規格に基づいてMPIプロセスの制御を行うことが可能です。Slurmの実装側の推奨としては、MPI実装側のMPIジョブの起動コマンドmpirunではなく、srunでMPIプログラムを実行することが推奨されています。
+Slurmでは、MPI実装との連携はPMIxの規格に基づいてMPIプロセスの制御を行うことが可能です。Slurmの開発元の推奨としては、MPI実装側のMPIジョブの起動コマンドmpirunではなく、srunでMPIプログラムを実行することが推奨されています。
 
 この為、バッチジョブ経由でなくとも、srunコマンドで直接MPIジョブを対話的にSlurmに投入することが可能です。
 
 
-動作例
+MPIジョブの投入例
+
 ```
 #!/bin/bash
 #SBATCH --job-name=sim_1        # job name (default is the name of this file)
@@ -37,8 +38,7 @@ Slurmでは、MPI実装との連携はPMIxの規格に基づいてMPIプロセ�
 #SBATCH --mem=20G               # RAM per node
 #SBATCH --threads-per-core=1    # do not use hyperthreads (i.e. CPUs = physical cores below)
 #SBATCH --cpus-per-task=4 
-## GPU allocation 
-#SBATCH --gres=gpu:2            # number of GPUs per node (gres=gpu:N)
+
 
 srun ./test
 
