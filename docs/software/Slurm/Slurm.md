@@ -3,12 +3,12 @@ id: Slurm
 title: Slurm の概要
 ---
 
-遺伝研スパコンでは、個人ゲノム解析区画用のジョブ管理システムとして従来AGE(Altia Grid Engine)に加えSlurm（Simple Linux Utility for Resource Management）を選択可能としています。
+遺伝研スパコンでは、個人ゲノム解析区画用のジョブ管理システムとしてAGE(Altia Grid Engine)に加えSlurm（Simple Linux Utility for Resource Management）を選択可能としています。
 Slurmは元々の開発元である米国LLNL(ローレンスリバモア国立研究所)を始めとして全世界の数多くの大規模クラスタ型スパコンシステムで利用実績があるオープンソースソフトウェアのジョブ管理システムで、複数のパブリッククラウド上でもHPC利用向けのジョブ管理システムとしても利用可能となっており、ジョブ管理システムとして広く利用されています。
 
-AGEとSlurmは基本的な機能では類似な部分が多いのですが、若干の用語、概念の差異、コマンド体系の差異はありますので、以下にご紹介します。
+## Slurmの概要・用語説明
 
-## Slurmの概要説明
+AGEとSlurmは基本的な機能では類似な部分が多いのですが、若干の用語、概念の差異、コマンド体系の差異はありますので、以下にご紹介します。
 
 ### ジョブについて
 
@@ -41,7 +41,6 @@ AGEでは、キュー(queue)と呼ばれる論理単位で管理しますが、S
 
 |用語| 定義・説明|
 |----------|-------|
-| LDom | Locality domain または NUMA Domain。遺伝研スパコンの場合はLDom=socketと考えてください。|
 |タスク |スレッド動作の説明時にはジョブと同義に使われますが、アレイジョブの説明時にはジョブから起動される子ジョブをタスクと呼ぶ場合があります|
 | Socket | システムの設定により異なりますが、Socketは遺伝研スパコンのThin計算ノードでは2と考えてください。|
 |CPU | オプション指定でのSlurm用語の中では、CPUは物理CPUを表すのではなくCPU=コアと考えてください。 |
@@ -62,7 +61,7 @@ AGEでは、キュー(queue)と呼ばれる論理単位で管理しますが、S
 6. ジョブが正常完了したら、出力ファイルから実行結果を確認する。
 
 
-## 基本的操作の紹介
+## 基本的なジョブ投入操作の紹介
 
 基本的操作の詳細については、以下の各ページでご説明します。
 
@@ -84,7 +83,7 @@ AGEとSlurmの利用目的別の基本的なコマンド対比表を示します
 |ノードのリスト表示| qhost |scontrol show nodes |[scontrol](https://slurm.schedmd.com/scontrol.html)    |
 |クラスタの状態表示|qhost -q | sinfo | [sinfo](https://slurm.schedmd.com/sinfo.html)   |
 
-各コマンドのオプション指定詳細はまた異なりますので、詳しくはオンラインマニュアルか、現在の開発元である米国SchedMD社のドキュメントサイトを参照してください。
+各コマンドのオプション指定詳細はまた異なりますので、詳しくは各コマンドのオンラインマニュアル、または米国SchedMD社のドキュメントサイトを参照してください。
 
 - Slurmのクイックスタートガイド https://slurm.schedmd.com/quickstart.html
 - Slurmのコマンドのサマリ表　https://slurm.schedmd.com/pdfs/summary.pdf
