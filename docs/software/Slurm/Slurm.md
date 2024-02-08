@@ -9,6 +9,7 @@ Slurmは元々の開発元である米国LLNL(ローレンスリバモア国立�
 参考資料
 
 -  [SchedMD(開発元)のQuick Start User Guide(英語)](https://slurm.schedmd.com/quickstart.html)
+- [Slurm のオンラインマニュアルページ](https://slurm.schedmd.com/man_index.html)
 -  [Slurmのコマンドのサマリ表](https://slurm.schedmd.com/pdfs/summary.pdf)
 -  [SchedMD(開発元)のTutorial(英語)](https://slurm.schedmd.com/tutorials.html)
 
