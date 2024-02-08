@@ -168,7 +168,10 @@ module.exports = {
                     type: 'category',
                     label: 'Slurm',
                     items: [
-                        "software/Slurm/Slurm"
+                        "software/Slurm/Slurm",
+                        "software/Slurm/batch_jobs",
+                        "software/Slurm/interactive_jobs",
+                        "software/Slurm/array_jobs",
                     ]
                 },
 
@@ -236,7 +239,7 @@ module.exports = {
             label: "開発環境・ライブラリ",
             items: [
                 "software/python",
-                "software/R",
+                "software/R2",
                 "software/jupyter_notebook",
                 "software/jupyter_lab",
                 "software/java",
