@@ -3,7 +3,7 @@ id: Slurm
 title: Slurm の概要
 ---
 
-遺伝研スパコンでは、個人ゲノム解析区画用のジョブ管理システムとしてAGE(Altia Grid Engine)に加えSlurm（Simple Linux Utility for Resource Management）を選択可能としています。
+遺伝研スパコンでは、個人ゲノム解析区画用のジョブ管理システムとしてAGE(Altair Grid Engine)に加えSlurm（Simple Linux Utility for Resource Management）を選択可能としています。
 Slurmは元々の開発元である米国LLNL(ローレンスリバモア国立研究所)を始めとして全世界の数多くの大規模クラスタ型スパコンシステムで利用実績があるオープンソースソフトウェアのジョブ管理システムで、複数のパブリッククラウド上でもHPC利用向けのジョブ管理システムとしても利用可能となっており、ジョブ管理システムとして広く利用されています。
 
 参考資料
