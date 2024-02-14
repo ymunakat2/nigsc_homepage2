@@ -3,15 +3,17 @@ id: Slurm
 title: Slurm の概要
 ---
 
-遺伝研スパコンでは、個人ゲノム解析区画用のジョブ管理システムとしてAGE(Altair Grid Engine)に加えSlurm（Simple Linux Utility for Resource Management）を選択可能としています。
-Slurmは元々の開発元である米国LLNL(ローレンスリバモア国立研究所)を始めとして全世界の数多くの大規模クラスタ型スパコンシステムで利用実績があるオープンソースソフトウェアのジョブ管理システムで、複数のパブリッククラウド上でもHPC利用向けのジョブ管理システムとしても利用可能となっており、ジョブ管理システムとして広く利用されています。
+Slurm はジョブスケジューラあるいはリソーススケジューラと呼ばれるプログラムの一種で、 多数のユーザーが利用している環境で、各ユーザに自動的に計算リソース（CPU コアやメモリ）を割り当てるものです。 
+- 一般解析区画では、Grid Engine を用いています。
+- 個人ゲノム解析区画では、Grid Engine または Slurm が利用可能です。
 
 参考資料
 
--  [SchedMD(開発元)のQuick Start User Guide(英語)](https://slurm.schedmd.com/quickstart.html)
+- [SchedMD(開発元)のQuick Start User Guide(英語)](https://slurm.schedmd.com/quickstart.html)
 - [Slurm のオンラインマニュアルページ](https://slurm.schedmd.com/man_index.html)
--  [Slurmのコマンドのサマリ表](https://slurm.schedmd.com/pdfs/summary.pdf)
--  [SchedMD(開発元)のTutorial(英語)](https://slurm.schedmd.com/tutorials.html)
+- [Slurmのコマンドのサマリ表](https://slurm.schedmd.com/pdfs/summary.pdf)
+- [SchedMD(開発元)のTutorial(英語)](https://slurm.schedmd.com/tutorials.html)
+- [Rosetta Stone of Workload Manager](https://slurm.schedmd.com/rosetta.pdf)
 
 
 ## ジョブの種類
@@ -40,7 +42,15 @@ Slurmは元々の開発元である米国LLNL(ローレンスリバモア国立�
 
 詳細は[その他のコマンド](/software/Slurm/other_commands)の項および公式マニュアルをご参照下さい。
 
-## Slurmの概要・用語説明
+## ジョブの実行が開始されない場合
+
+- ジョブの設定が間違っていないか確認する。
+    - オンラインマニュアル等を参照してください。
+- スパコンの混雑状況を確認する。
+    - sinfo等のコマンドで利用状況を参照してください。
+
+
+## Slurmの用語説明
 
 AGEとSlurmは基本的な機能では類似な部分が多いのですが、若干の用語、概念の差異、コマンド体系の差異はありますので、以下にご紹介します。
 

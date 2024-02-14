@@ -113,7 +113,7 @@ OpenACC organizationにより仕様が策定されており、オープンな仕
 
 Intel/AMD/NVIDIAのGPU間でのポータビリティを重視する場合OpenMPが利用される傾向があるようです。しかしNVIDIA GPU向けであれば、NVIDIAがOpenACCのサポートにより積極的ではあるため、OpenMPよりOpenACCのほうがより高性能のコードを生成できる傾向があるようです。
 
-## MPIの利用(入ってないかもしれない)
+## MPIの利用?
 NVIDIA HPC SDKではOpenMPIが利用可能になっています。以下のCompiler Wrapperが利用可能です。
 
 |言語 | Compiler Wrapper |
