@@ -17,12 +17,8 @@ title: "C/C++の使い方(NVIDIA HPC Compiler)"
 
 バージョン23.7の各コンポーネントのバージョン等は[23.7 リリースノード](https://docs.nvidia.com/hpc-sdk/archive/23.7/hpc-sdk-release-notes/index.html)を参照してください。
 
-モジュールファイルがインストールされていますので、以下のコマンドで環境設定を行なってください。
 
-```
-module load nvhpc
-```
-コンパイラにパスが通っていることを確認します。
+遺伝研スパコンでは、NVIDIA HPCコンパイラについてはデフォルトでコンパイラにパスが通っています。パスが通っていることを確認します。
 
 ```
 which nvc
@@ -67,7 +63,6 @@ nvc++ -fast -Mipa=fast,inline -Minfo test.cpp (C++コンパイラ)
 |-⁠acc	| OpenACC ディレクティブを使用して並列化を有効にします。|
 |-⁠fast	|SIMD 機能をサポートするターゲットに対して一般的に最適なフラグのセットを作成します。ベクトルストリーミング SIMD 命令、キャッシュ・アライメント、flushz を使用できるようにする最適化オプションが組み込まれています。|
 |-⁠g | オブジェクト・モジュールにシンボリック・デバッグ情報を含めるようコンパイラに指示します。コマンドラインに-Oオプションがない限り、最適化レベルをゼロに設定します。逆に、[DWARF](https://ja.wikipedia.org/wiki/DWARF)情報を生成しないようにするには、-Mnodwarfオプションを使用します。|
-|-⁠gopt | オブジェクト・ファイルにシンボリック・デバッグ情報を含めるようコンパイラに指示し、-g が指定されていないときと同じ最適化されたコードを生成するようにします。|
 |-⁠gpu | コードが生成されるGPUの種類、対象となるCUDAのバージョン、その他GPUコード生成のいくつかの側面を制御します。|
 |-⁠help|利用可能なオプションの情報を提供します。|
 |-⁠mcmodel=medium|64ビットターゲット用のコード生成を有効にし、プログラムのデータ容量が4GBを超える場合に有効です。|
@@ -76,20 +71,14 @@ nvc++ -fast -Mipa=fast,inline -Minfo test.cpp (C++コンパイラ)
 |-⁠Minfo|標準エラーに情報を出力するようコンパイラに指示します。|
 |-⁠Minline | 関数のインライン化を可能にします。|
 |-⁠Mipa=fast,inline| プロシージャ間のグローバル解析と最適化を可能にします。|
-|-⁠Mkeepasm|生成されたアセンブリファイルを保持します。|
 |-⁠Munroll | ループアンローラーを起動してループを展開し、各反復の間にループの複数のインスタンスを実行します。また、最適化レベルが 2 未満に設定されている場合、または -O や -g オプションが指定されていない場合、最適化レベルが 2 に設定されます。|
-|-⁠M[no]vect|コードベクタライザーを有効[無効]にします。|
-|--⁠[no]exceptions|ユーザーコードから例外処理を削除します。C++の場合、このファイル内の関数はC++の例外を生成しないことを宣言し、より最適なコード生成を可能にします。|
 |-⁠o|出力する実行可能ファイル名を指定します。|
 |-⁠O level | コード最適化レベルを指定します。levelは0、1、2、3、4です。|
-|-⁠stdpar | 標準C++およびFortranの並列化およびNVIDIA GPUへのオフロードを有効にします。デフォルトは-stdpar=gpuです。|
-|-⁠tp target|コンパイルを行っているホストCPU以外のCPUターゲットを指定します。|
-|-⁠Wl,option|コンパイラ・ドライバは、指定されたオプションをリンカに渡します。|
 
 
 ## OpenMPの利用
 
-NVIDIA HPC CompilerではOpenMPが利用可能です。OpenMPはプログラムコード内の並列処理部分をコンパイラディレクティブ（指示行）でプログラマが明示的に指定しコンパイラがそれに従い並列化可能部分を抽出、より多数のCPUコアで並列処理したり、GPU等の外部プロセッサにオフロード並列処理する為の仕組みです。OpenMP4.0以降ではCPU以外へのオフロードにも対応しGPU、FPGAなどのアクセラレータ用の汎用並列規格にもなっています。現在OpenMPはIntel、AMD、NVIDIAがサポートしておりベンダ間での汎用的な並列規格になっています。
+NVIDIA HPC CompilerではOpenMPが利用可能です。OpenMP4.0以降ではCPU以外へのオフロードにも対応しGPU、FPGAなどのアクセラレータ用の汎用並列規格にもなっています。現在OpenMPはIntel、AMD、NVIDIAがサポートしておりベンダ間での汎用的な並列規格になっています。
 使用方法詳細については以下のサイトを参照してください。
 
 - [HPC SDK Documentation Using OpenMP](https://docs.nvidia.com/hpc-sdk/archive/23.7/compilers/hpc-compilers-user-guide/index.html#openmp-use)
@@ -99,7 +88,7 @@ NVIDIA HPC CompilerではOpenMPが利用可能です。OpenMPはプログラム�
 
 ## OpenACCの利用
 
-NVIDIA HPC Compilerでは、OpenACCが利用可能です。OpenACCはプログラムコード内の並列処理部分をコンパイラディレクティブ（指示行）でプログラマが明示的に指定しコンパイラがそれに従い並列化可能部分を抽出、より多数のCPUコアで並列処理したり、GPU等の外部プロセッサにオフロード並列処理する為の仕組みです。使用方法については以下のサイトをご参照ください。
+NVIDIA HPC Compilerでは、OpenACCが利用可能です。使用方法については以下のサイトをご参照ください。
 
 - [OpenACC Getting Started(NVIDIA)(利用方法についての概説があります)](https://docs.nvidia.com/hpc-sdk/archive/23.7/compilers/openacc-gs/index.html)
 
