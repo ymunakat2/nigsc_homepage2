@@ -293,7 +293,7 @@ R Studio Server
 <tr>
 <td width="300">
 
-C/C++ (Intel Compiler)
+[C/C++ (Intel Compiler)](/software/intel_compiler)
 
 </td>
 <td width="300">インストール済み</td>
@@ -303,7 +303,7 @@ C/C++ (Intel Compiler)
 <tr>
 <td width="300">
 
-C/C++ (PGI Compiler)
+[C/C++ (PGI Compiler)](/software/pgi_compiler)
 
 </td>
 <td width="300">インストール済み</td>

@@ -3,7 +3,7 @@ id: pgi_compiler
 title: "C/C++の使い方(NVIDIA HPC Compiler)"
 ---
 
-旧PGI(Portland Group Inc.)は2013年にNVIDIAに買収され、現在旧PGI Compilerは、NVIDIA HPC SDK内のNVIDIA HPC Compilerとして開発が継続されています。本節ではNVIDIA HPCコンパイラ(C/C++)のシステム内での利用環境について説明します。
+現在旧PGI Compilerは、NVIDIA HPC SDK内のNVIDIA HPC Compilerとして開発が継続されています。本節ではNVIDIA HPCコンパイラ(C/C++)のシステム内での利用環境について説明します。
 
 ## 利用環境
 

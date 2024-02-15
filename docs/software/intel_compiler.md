@@ -55,22 +55,6 @@ IntelコンパイラでサポートされているOpenMPの機能詳細につい
 
 
 
-### MPIの利用
-
-Intel OneAPIからはIntel MPI Libraryが利用可能です。コンパイルにはMPI Compiler Wrapperが利用可能です。
-
-|言語 |Compiler Wrapper |
-|-----|----------------|
-|C | mpicc|
-|C++ | mpic++|
-
-```
-mpicc -o myprog myprog.c
-
-```
-
-参考　[Getting started with Intel MPI Library for Linux OS](https://www.intel.com/content/www/us/en/docs/mpi-library/get-started-guide-linux/2021-11/overview.html)
-
 
 ### Intel MKL の利用方法
 遺伝研スパコンでは、Intel Math Kernel Libraryを利用可能です。
