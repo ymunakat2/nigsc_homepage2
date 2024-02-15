@@ -170,8 +170,9 @@ module.exports = {
                     items: [
                         "software/Slurm/Slurm",
                         "software/Slurm/batch_jobs",
-                        "software/Slurm/interactive_jobs",
+                        "software/Slurm/parallel_jobs",
                         "software/Slurm/array_jobs",
+                        "software/Slurm/other_commands",
                     ]
                 },
 
@@ -246,6 +247,8 @@ module.exports = {
                 "software/typescript",
                 "software/rust",
                 "software/gcc/gcc",
+                "software/intel_compiler",
+                "software/pgi_compiler",
                 "software/cuda",
             ]
 
