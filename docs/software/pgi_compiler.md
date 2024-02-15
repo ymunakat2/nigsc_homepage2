@@ -96,9 +96,15 @@ OpenACC organizationにより仕様が策定されており、オープンな仕
 
 - [OpenACC Organization ](https://www.openacc.org/)
 
+- [OpenACC Programming and Best Practices Guide](https://openacc-best-practices-guide.readthedocs.io/en/latest/)
+
+(以下は、企業のサイトなのでリンク貼るかは判断必要)
+
 - [OpenACC Programing](https://hpcworld.jp/archive/SPG/Pgi/OpenACC/)
 
 - [GPUコラム OpenACCで始めるGPUプログラミング](https://gdep-sol.co.jp/gpu-programming/)
+
+
 
 Intel/AMD/NVIDIAのGPU間でのポータビリティを重視する場合OpenMPが利用される傾向があるようです。しかしNVIDIA GPU向けであれば、NVIDIAがOpenACCのサポートにより積極的ではあるため、OpenMPよりOpenACCのほうがより高性能のコードを生成できる傾向があるようです。
 
